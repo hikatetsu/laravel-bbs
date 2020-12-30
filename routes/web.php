@@ -19,3 +19,5 @@ use App\Http\Controllers\PostsController;
 // });
 
 Route::get('/', [PostsController::class, 'index'])->name('top');
+
+Route::resource('posts', PostsController::class, ['only' => ['create', 'store']]);
